@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <main>
+        <div class="bloco">
+            <h1>Aceita sair comigo?</h1>
+            <button id="sim" type="submit" onclick="abrirAlerta()">Sim</button>
+            <button id="nao" type="submit" onmouseover="moveButton(this)">Não</button>
+        </div>
+        
+    </main>  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function abrirAlerta(){
+    Swal.fire({
+    title: "Adoraria assistir um filme contigo",
+    text: "Vamos de cineminha?",
+    footer: '<a href="https://api.whatsapp.com/send?phone=5579998248357"> Link para confirmar uma data :)</a>'
+});
+}
+function moveButton(x) {
+        marginX = Math.floor(Math.random()*600)
+        marginY = Math.floor(Math.random()*600)
+
+        x.style.margin = marginY.toString() + 'px ' + marginX.toString() + 'px'
+}
+</script>
+    
+</html>
